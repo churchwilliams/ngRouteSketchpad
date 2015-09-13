@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html ng-app="miniRouting">
+<head>
+	<title>Mini routing project</title>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+
+<div class="menu">
+  <ul>
+    <li><a href="#/"> Home </a></li>
+      <li><a href="#/products">Products</a></li>
+      <ul>
+        <li><a href="#/products/shoes">Shoes</a></li>
+        <li><a href="#/products/socks">Socks</a></li>
+      </ul>
+    </li>
+    <li><a href="#/settings"> Settings </a></li>
+  </ul>
+</div>
+<div class="view-container">
+	<ng-view></ng-view>
+</div>
+
+
+<!-- angular and routing CDNs -->
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular-route.min.js"></script>
+
+<!-- app.js -->
+<script type="text/javascript" src="js/app.js"></script>
+
+<!-- home -->
+<script type="text/javascript" src="templates/home/homeCtrl.js"></script>
+
+<!-- products -->
+<script type="text/javascript" src="templates/products/productsCtrl.js"></script>
+<script type="text/javascript" src="templates/products/productsService.js"></script>
+
+<!-- settings -->
+<script type="text/javascript" src="templates/settings/settingsCtrl.js"></script>
+</body>
+</html>
